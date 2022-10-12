@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const songPlayListController = require('../controller/songPlayListController');
+router.get('/songplaylist',songPlayListController.getAllSongPlayList);
+router.get('/songplaylist/:id',songPlayListController.getSongPlayListById);
+router.post('/songplaylist',songPlayListController.createSongPlayList);
+router.put('/songplaylist/:id',songPlayListController.updateSongPlayList);
+router.delete('/songplaylist/:id',songPlayListController.deleteSongPlayList);
+router.get('/playlistdata',songPlayListController.getAllPlayListData);
+module.exports = router;
